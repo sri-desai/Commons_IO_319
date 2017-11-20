@@ -2359,7 +2359,25 @@ public class FileUtils {
             return 0L;
         }
         for (File file : files) {
-            size += sizeOf(file);
+        	
+        	try {
+				if(isSymlink(file)) {
+					continue;
+				}
+				else {
+					size += sizeOf(file);
+				}
+			} catch (IOException e) {
+				
+				/* Not sure what to do */
+			}
+    		
+    		if(size < 0L) {
+    			size = 0L;
+    			break;
+    		}
+        	
+            
         }
 
         return size;

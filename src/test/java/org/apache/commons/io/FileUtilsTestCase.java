@@ -710,6 +710,19 @@ public class FileUtilsTestCase extends FileBasedTestCase {
         // Existing directory
         file.delete();
         file.mkdir();
+        
+     // Create a cyclic symlink
+        if(!FilenameUtils.isSystemWindows()) {
+            Runtime.getRuntime()
+                .exec("ln -s " + file + "/.. " + file + "/cycle");
+        } else {
+            try {
+                Runtime.getRuntime()
+                    .exec("mklink /D " + file + "/cycle" + file + "/.. ");
+            } catch(IOException ioe) { // So that tests run in FAT filesystems
+              //don't fail
+            }
+        }
 
         assertEquals(
             "Unexpected directory size",

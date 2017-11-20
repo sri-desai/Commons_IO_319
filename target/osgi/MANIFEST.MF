@@ -1,0 +1,23 @@
+Manifest-Version: 1.0
+Bnd-LastModified: 1511160022659
+Build-Jdk: 1.8.0_151
+Built-By: srinivas
+Bundle-Description: The Commons IO library contains utility classes, str
+ eam implementations, file filters, file comparators, endian transformat
+ ion classes, and much more.
+Bundle-DocURL: http://commons.apache.org/io/
+Bundle-License: http://www.apache.org/licenses/LICENSE-2.0.txt
+Bundle-ManifestVersion: 2
+Bundle-Name: Commons IO
+Bundle-SymbolicName: org.apache.commons.io
+Bundle-Vendor: The Apache Software Foundation
+Bundle-Version: 2.4.0.SNAPSHOT
+Created-By: Apache Maven Bundle Plugin
+Export-Package: org.apache.commons.io.input;version="2.4.0.SNAPSHOT",org
+ .apache.commons.io.comparator;version="2.4.0.SNAPSHOT",org.apache.commo
+ ns.io.output;version="2.4.0.SNAPSHOT",org.apache.commons.io.monitor;ver
+ sion="2.4.0.SNAPSHOT",org.apache.commons.io;version="2.4.0.SNAPSHOT",or
+ g.apache.commons.io.filefilter;version="2.4.0.SNAPSHOT"
+Include-Resource: META-INF/LICENSE.txt=LICENSE.txt,META-INF/NOTICE.txt=N
+ OTICE.txt
+Tool: Bnd-1.50.0
